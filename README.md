@@ -1,8 +1,8 @@
 # Ecommerce
-An Ecommerce React single page app (SPA), made by Junchen Wang (https://chen858858.github.io/), for the [InnoCaption](https://www.innocaption.com/) Summer 2024 Engineer Intern application.
+An Ecommerce React single page app (SPA), made by Junchen Wang ([Website](https://chen858858.github.io/), [LinkedIn](https://linkedin.com/in/jchen-wang), [GitHub profile](https://github.com#Chen858858)),  for the [InnoCaption](https://www.innocaption.com/) Summer 2024 Engineer Intern application.
 Initially finished April 4, 2024.
 ## Description
-The SPA first pulls all the products provided by DummyJSON (https://dummyjson.com/) through a REST API. With this data processed, users can search for, view, add, edit, and delete products.
+The SPA first pulls all the products provided by [DummyJSON](https://dummyjson.com/) through a REST API. With this data processed, users can search for, view, add, edit, and delete products.
 ## How to download and start
 * Have Node.js and npm installed.
 * Clone this repository.
