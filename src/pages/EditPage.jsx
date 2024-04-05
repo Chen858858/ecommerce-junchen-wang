@@ -193,6 +193,7 @@ const EditPage = ({items, categories, editItem}) => {
     <div className="title is-size-3 mb-3">Edit item</div>
     <div>
       <form onSubmit={submitForm}>
+        {/* Inputs. */}
         <TextInput label="Title" initialValue={title} onChangeFunction={(e) => {setTitle(e.target.value)}} />
         <TextInput label="Brand" initialValue={brand} onChangeFunction={(e) => {setBrand(e.target.value)}} />
         <Select label="Category" initialValue={category} options={categories} isCategories="true" isDefaultValue={false} onChangeFunction={(e) => {setCategory(e.target.value)}} />
@@ -203,12 +204,14 @@ const EditPage = ({items, categories, editItem}) => {
         <TextInput label="Stock" initialValue={stock} onChangeFunction={(e) => {setStock(e.target.value)}} />
         <TextInput label="Thumbnail url" initialValue={thumbnail} onChangeFunction={(e) => {setThumbnail(e.target.value)}} />
         <Textarea label="Image url(s) (separate by lines)" initialValue={images} onChangeFunction={(e) => {setImages(e.target.value)}} />
+        {/* Errors if any. */}
         {errors.length > 0 && <div className="content is-size-5 has-text-danger mb-2">
           Error(s):
           <ul>
             {errors.map((error) => <li key={error}>{error}</li>)}
           </ul>
         </div>}
+        {/* Submit button. */}
         <button className="button is-success is-size-5 has-text-white">
           <FaPencilAlt />&ensp;
           Edit item

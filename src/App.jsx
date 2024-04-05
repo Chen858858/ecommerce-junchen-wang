@@ -61,6 +61,7 @@ function App() {
     return;
   };
 
+  // Delete item function.
   const deleteItem = async (id) => {
     const res = await fetch(`https://dummyjson.com/products/${id}`, {
       method: "DELETE"

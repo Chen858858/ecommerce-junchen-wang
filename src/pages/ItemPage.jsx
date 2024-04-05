@@ -47,6 +47,7 @@ const ItemPage = ({items}) => {
           <div className="is-size-5 mb-1">
             <RatingWithStars rating={item.rating} verticalAlignValue="-2px" />
           </div>
+          {/* Edit and delete buttons. */}
           <div>
             <Link to={`/edit/${id}`} className="button is-primary is-size-6 has-text-left"><FaPencilAlt />&ensp;Edit</Link>&ensp;
             <Link to={`/delete/${id}`} className="button is-danger is-size-6 has-text-left has-text-white"><FaTrashAlt />&ensp;Delete</Link>
@@ -61,6 +62,7 @@ const ItemPage = ({items}) => {
       <div className="is-size-5 mb-4">{item.description}</div>
       <div className="columns">
         <div className="column is-half-width">
+          {/* Discounted price with original price and discount percentage. */}
           <div className="is-size-3">
             ${(Math.ceil(item.price * (100 - item.discountPercentage))/100).toFixed(2)}
           </div>

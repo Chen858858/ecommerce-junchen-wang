@@ -30,6 +30,7 @@ const DeletePage = ({items, deleteItem}) => {
       </Link>
       <div className="is-size-5 m-1">
         Are you sure you want to delete the item "{item.title}"?<br />
+        {/* Confirm delete button. */}
         <button className="button is-danger is-size-5 has-text-white mt-3" onClick={() => submitForm()}>
           <FaTrashAlt />&ensp;
           Yes, delete this item.

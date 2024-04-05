@@ -14,7 +14,7 @@ const SearchPage = ({items, categories}) => {
     const termCleaned = term.trim().toLowerCase();
     tempFilteredItems = category == "all" ? tempFilteredItems
       : tempFilteredItems.filter((item) => {return item.category == category});
-    // Filter by term on title or brand.
+    // Filter by term on title or brand, if applicable.
     tempFilteredItems = termCleaned == "" ? tempFilteredItems
       : tempFilteredItems.filter((item) => {
         return (item.title.toLowerCase().includes(termCleaned) || item.brand.toLowerCase().includes(termCleaned));
@@ -49,6 +49,7 @@ const SearchPage = ({items, categories}) => {
           </select>
         </div>
       </div>
+      {/* Id sort input. */}
       <div className="column">
         <div className="select is-fullwidth is-size-5">
           <select defaultValue="false" onChange={(e) => setSortIdHighestToLowest(e.target.value)}>

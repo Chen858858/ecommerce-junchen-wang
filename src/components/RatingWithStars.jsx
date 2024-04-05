@@ -7,6 +7,7 @@ const RatingWithStars = ({rating, verticalAlignValue = "0px"}) => {
   for(let wholeStar = 0; wholeStar < Math.floor(rating); wholeStar++){
     wholeStars.push(wholeStar);
   }
+  // Include half star if necessary.
   const halfStar = (rating - Math.floor(rating)) >= 0.5;
 
   return (<>

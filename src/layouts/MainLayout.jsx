@@ -9,6 +9,7 @@ const MainLayout = () => {
     `navbar-item ${isActive && " has-background-dark"} is-size-5`;
 
   return (<>
+    {/* Navigation bar. */}
     <nav className="navbar is-link p-3">
       <div className="navbrand is-size-3 has-text-white has-text-weight-bold">
         <FaStore style={{verticalAlign: "-3px"}} /> Ecommerce
@@ -20,7 +21,9 @@ const MainLayout = () => {
         </div>
       </div>
     </nav>
+    {/* Page content. */}
     <Outlet />
+    {/* React Toastify element. */}
     <ToastContainer />
   </>)
 }

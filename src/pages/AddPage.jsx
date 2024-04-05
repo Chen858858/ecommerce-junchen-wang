@@ -166,6 +166,7 @@ const AddPage = ({items, categories, addItem}) => {
     <div className="title is-size-3 mb-3">Add item</div>
     <div>
       <form onSubmit={submitForm}>
+        {/* Inputs. */}
         <TextInput label="Title" onChangeFunction={(e) => {setTitle(e.target.value)}} />
         <TextInput label="Brand" onChangeFunction={(e) => {setBrand(e.target.value)}} />
         <Select label="Category" initialValue={"smartphone"} options={categories} isCategories="true" isDefaultValue="false" onChangeFunction={(e) => {setCategory(e.target.value)}} />
@@ -176,12 +177,14 @@ const AddPage = ({items, categories, addItem}) => {
         <TextInput label="Stock" onChangeFunction={(e) => {setStock(e.target.value)}} />
         <TextInput label="Thumbnail url" onChangeFunction={(e) => {setThumbnail(e.target.value)}} />
         <Textarea label="Image url(s) (separate by lines)" onChangeFunction={(e) => {setImages(e.target.value)}} />
+        {/* Errors if any. */}
         {errors.length > 0 && <div className="content is-size-5 has-text-danger mb-2">
           Error(s):
           <ul>
             {errors.map((error) => <li key={error}>{error}</li>)}
           </ul>
         </div>}
+        {/* Submit button. */}
         <button className="button is-success is-size-5 has-text-white">
           <FaPlus/>&ensp;
           Add item
