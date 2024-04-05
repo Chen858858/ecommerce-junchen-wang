@@ -8,7 +8,7 @@ const SearchCard = ({item}) => {
       <div className="box">
         <div className="columns">
           <div className="column is-two-thirds">
-            {/* Title. */}
+            {/* Title and category. */}
             <div className="title is-size-3 mb-0">
               {item.title}&ensp;
               <div className="tag is-size-6 has-text-weight-normal">

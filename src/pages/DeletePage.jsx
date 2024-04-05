@@ -16,7 +16,7 @@ const DeletePage = ({items, deleteItem}) => {
 
   return !item ? (<>
     <div className="box m-3">
-      <Link to="/" class="button is-size-5 mb-3">
+      <Link to="/" className="button is-size-5 mb-3">
         <FaArrowLeft />&ensp;Back to Search
       </Link>
       <div className="is-size-5 m-1">
@@ -25,7 +25,7 @@ const DeletePage = ({items, deleteItem}) => {
     </div>
   </>) : (<>
     <div className="box m-3">
-      <Link to="/" class="button is-size-5 mb-3">
+      <Link to="/" className="button is-size-5 mb-3">
         <FaArrowLeft />&ensp;Back to Search
       </Link>
       <div className="is-size-5 m-1">
