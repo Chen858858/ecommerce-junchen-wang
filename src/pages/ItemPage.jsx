@@ -83,8 +83,8 @@ const ItemPage = ({items}) => {
         Click on image to enlarge.
       </div>
       <div style={{width: "100%", height: "230px", overflowX: "auto", whiteSpace: "nowrap"}}>
-        {item.images.map((image) =>
-          <img src={image} key={image} alt={item.title} 
+        {item.images.map((image, idx) =>
+          <img src={image} key={idx} alt={item.title} 
             className="mr-1 ml-1" style={{height: "200px", cursor: "pointer"}}
             onClick={() => changeModal(image, true)}
           />)

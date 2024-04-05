@@ -41,11 +41,10 @@ function App() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newItem)
-    })
-    .then(res => res.json())
-    .then(
-      items.push(newItem)
-    );
+    });
+    let modifiedItems = [...items];
+    modifiedItems.push(newItem);
+    setItems(modifiedItems);
     return;
   };
 
@@ -59,17 +58,18 @@ function App() {
     let modifiedItems = [...items];
     modifiedItems[itemIdx] = {...modifiedItem};
     setItems([...modifiedItems]);
+    return;
   };
 
   const deleteItem = async (id) => {
     const res = await fetch(`https://dummyjson.com/products/${id}`, {
       method: "DELETE"
     })
-    .then(res => res.json());
     const itemIdx = items.findIndex(item => item.id == id);
     let modifiedItems = [...items];
     modifiedItems.splice(itemIdx, 1);
     setItems([...modifiedItems]);
+    return;
   }
 
   const router = createBrowserRouter(
