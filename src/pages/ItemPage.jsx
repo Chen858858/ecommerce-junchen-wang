@@ -30,7 +30,9 @@ const ItemPage = ({items}) => {
           {/* Title and category. */}
           <div className="title is-size-1 mb-0">
             {item.title}
-            &ensp;<span className="tag is-size-5 has-text-weight-normal">{item.category}</span>
+            &ensp;<span className="tag is-size-5 has-text-weight-normal">
+              {item.category.charAt(0).toUpperCase() + item.category.slice(1).replace(/-/g," ")}
+            </span>
           </div>
           {/* Brand. */}
           <div className="title is-size-4 mb-2">{item.brand}</div>

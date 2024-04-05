@@ -35,7 +35,7 @@ const SearchPage = ({items, categories}) => {
     <div className="columns">
       {/* Search term input. */}
       <div className="column">
-        <input type="text" id="termInput" className="input is-fullwidth is-size-5"
+        <input type="text" className="input is-fullwidth is-size-5"
           placeholder="Enter item name..."
           onChange={(e) => setTerm(e.target.value)}
         />
@@ -43,7 +43,7 @@ const SearchPage = ({items, categories}) => {
       {/* Category input. */}
       <div className="column">
         <div className="select is-fullwidth is-size-5">
-          <select id="categoryInput" onChange={(e) => setCategory(e.target.value)}>
+          <select onChange={(e) => setCategory(e.target.value)}>
             <option key="all" value="all">All categories</option>
             {categories.map((category) => <option key={category} value={category}>{category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g," ")}</option>)}
           </select>

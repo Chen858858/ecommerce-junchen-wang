@@ -9,7 +9,12 @@ const SearchCard = ({item}) => {
         <div className="columns">
           <div className="column is-two-thirds">
             {/* Title. */}
-            <div className="title is-size-3 mb-0">{item.title}</div>
+            <div className="title is-size-3 mb-0">
+              {item.title}&ensp;
+              <div className="tag is-size-6 has-text-weight-normal">
+                {item.category.charAt(0).toUpperCase() + item.category.slice(1).replace(/-/g," ")}
+              </div>
+            </div>
             {/* Brand. */}
             <div className="is-size-5 m-0 has-text-weight-bold">{item.brand}</div>
             {/* Rating with stars. */}
